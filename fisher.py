@@ -1,12 +1,14 @@
-from flask import Flask, make_response
+from flask import Flask
+
+from helper import is_isbn_or_key
 
 app = Flask(__name__)
 
 app.config.from_object('config')
-@app.route("/hello", methods=['GET', 'POST', 'delete'])
-def hello():
-    li = {"name": "Tianjin"}
-    return li
+@app.route("/book/search/<q>/<page>", methods=['GET', 'POST', 'delete'])
+def searcb(q, page):
+
+    is_isbn_or_key(q)
 
 
 if __name__ == "__main__":
