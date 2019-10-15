@@ -1,12 +1,6 @@
-from flask import Flask, jsonify
+from app import create_app
 
-from helper import is_isbn_or_key
-from yushu_book import YuShuBook
-
-app = Flask(__name__)
-
-app.config.from_object('config')
-
+app = create_app()
 
 
 if __name__ == "__main__":
