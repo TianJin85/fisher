@@ -7,8 +7,9 @@ verify_ssl = true
 
 [packages]
 requests = "*"
-socketserver = "*"
 flask = "==0.12.2"
+wtforms = "*"
+flask-sqlalchemy = "==2.3.2"
 
 [requires]
 python_version = "3.6"
