@@ -6,9 +6,20 @@
 @Email   : tianjincn@163.com
 @Software: PyCharm
 """
+from sqlalchemy import Column, String, Integer
+
 
 class Book():
-    pass
 
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    title = Column(String(50), nullable=False)
+    binding = Column(String(20))
+    publisher = Column(String(20))
+    pages = Column(String(20))
+    pudbate = Column(String(20))
+    isbn = Column(String(15), nullable=False, unique=True)
+    summary = Column(String(1000))
+    image = Column(String(50))
+    
     def sample(self):
         pass
