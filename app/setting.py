@@ -6,3 +6,4 @@
 @Email   : tianjincn@163.com
 @Software: PyCharm
 """
+PER_PAGE = 15
