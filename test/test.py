@@ -10,6 +10,15 @@ import threading
 import time
 
 
+request = None
+
+request1 = Request()
+request2 = Request()
+request3 = Request()
+
+
+# 字典
+
 def worker():
     print('i am thread')
     tht = threading.current_thread()

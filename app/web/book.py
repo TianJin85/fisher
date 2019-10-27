@@ -6,6 +6,17 @@ from app.libs.helper import is_isbn_or_key
 from app.Spider.yushu_book import YuShuBook
 
 
+@web.route('/test')
+def test1():
+    from flask import request
+    from app.libs.none_local import NoneLocal as n
+    print(n.v)
+    n.v = 2
+    print("-------------------")
+    print(getattr(request, 'v', None))
+    setattr(request, 'v', 2)
+    print("-------------------")
+    return ""
 @web.route("/book/search/")
 def searcb():
     """
