@@ -27,7 +27,7 @@ class RegisterFrom(Form):
 
     def validate_nickname(self, field):
         if User.query.filter_by(nickname=field.data).first():
-            raise ValidationError('电子邮箱已注册')
+            raise ValidationError('用户已注册')
 
 
 class LoginForm(Form):

@@ -3,4 +3,4 @@ from flask import Blueprint
 web = Blueprint('web', __name__)
 
 
-from app.web import book, auth, drift, gift, main, test
+from app.web import book, auth, drift, gift, main, wish
