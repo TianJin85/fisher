@@ -13,9 +13,10 @@ from flask_login import UserMixin
 from app.Spider.yushu_book import YuShuBook
 from app.libs.helper import is_isbn_or_key
 from app.models.base import Base
-from app import login_manager
+# from app import login_manager
 from app.models.gift import Gift
 from app.models.wish import Wish
+from flask_login import login_manager
 
 
 class User(UserMixin, Base):
@@ -66,7 +67,6 @@ class User(UserMixin, Base):
             return False
 
 
-
-@login_manager.user_loader
+@login_manager.token_loader
 def get_user(uid):
     return User.query.get(int(uid))
